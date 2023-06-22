@@ -128,15 +128,16 @@ const scrollActive = () => {
   });
 };
 window.addEventListener("scroll", scrollActive);
+
 window.addEventListener("load", () => {
   const loaderSpinner = document.querySelector(".loading-spinner");
-  const pageContent = document.querySelector(".page-content");
+  const body = document.body;
 
   // Hide the loader spinner
   loaderSpinner.style.display = "none";
 
   // Show the page content
-  pageContent.style.display = "block";
+  body.style.visibility = "visible";
 });
 
 /*=============== DARK LIGHT THEME ===============*/
