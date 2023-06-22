@@ -131,13 +131,13 @@ window.addEventListener("scroll", scrollActive);
 
 window.addEventListener("load", () => {
   const loaderSpinner = document.querySelector(".loading-spinner");
-  const body = document.body;
+  const main = document.querySelector(".main");
 
-  // Hide the loader spinner
-  loaderSpinner.style.display = "none";
-
-  // Show the page content
-  body.style.visibility = "visible";
+  // Hide the loader spinner after 4 seconds
+  setTimeout(() => {
+    loaderSpinner.style.display = "none";
+    main.style.visibility = "visible";
+  }, 2000);
 });
 
 /*=============== DARK LIGHT THEME ===============*/

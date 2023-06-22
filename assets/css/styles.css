@@ -61,30 +61,31 @@
    }
 }
 
-/*=============== BASE ===============*/
+/*=============== LOADER ===============*/
+
 
 .loading-spinner {
    position: fixed;
    left: 50%;
    transform: translate(-50%, -50%) translateZ(0);
    top: 50%;
-   width: 90px;
-   height: 90px;
+   width: 115px;
+   height: 115px;
    z-index: 1;
-   background: url('../img/logo.png') center no-repeat;
+   background: url('../img/logo-white.png') center no-repeat;
    background-size: contain;
-   /*animation: spinning 1.5s infinite ease-in-out;*/
+   animation: spinning 1.5s infinite ease-in-out;
 }
 
 .loading-spinner:after {
    content: "";
    position: absolute;
-   width: 120px;
-   height: 120px;
+   width: 150px;
+   height: 150px;
    background-color: rgba(0, 0, 0, 0);
    border-radius: 100%;
    margin: -15px;
-   box-shadow: 0 4px 0 0 #000;
+   box-shadow: 0 4px 0 0 #ffffff;
    transition: all 1s linear;
    animation: lds-eclipse 1s linear infinite;
 }
@@ -121,6 +122,8 @@
       transform: rotate(360deg);
    }
 }
+
+/*=============== BASE ===============*/
 
 * {
    box-sizing: border-box;
@@ -263,6 +266,7 @@ body.dark-theme {
 
 .main {
    overflow: hidden;
+   visibility: hidden;
    /* For animation ScrollReveal */
 }
 
