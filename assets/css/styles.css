@@ -246,8 +246,8 @@ body.dark-theme {
    .logo {
       height: auto;
       width: 50px;
-      margin-right: 15px;
-      margin-left: -10px;
+      /* margin-right: 15px; */
+      /* margin-left: -10px; */
    }
 
    .nav__menu {
