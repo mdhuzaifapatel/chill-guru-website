@@ -137,7 +137,7 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     loaderSpinner.style.display = "none";
     main.style.visibility = "visible";
-  }, 2000);
+  }, 1500);
 });
 
 /*=============== DARK LIGHT THEME ===============*/
