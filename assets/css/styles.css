@@ -227,8 +227,10 @@ body.dark-theme {
 .nav__logo {
    color: var(--white-color);
    font-family: var(--second-font);
-   font-weight: var(--body-font);
+   font-size: 25px;
+   font-weight: var(--font-medium);
    transition: color 0.4s;
+   margin-top: -10px;
    margin-left: -185px;
 }
 
@@ -242,12 +244,18 @@ body.dark-theme {
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 1023px) {
-  
+
    .logo {
       height: auto;
       width: 50px;
-      /* margin-right: 15px; */
+      margin-right: 15px;
       /* margin-left: -10px; */
+   }
+
+   .nav__logo {
+      font-size: 21px;
+      font-weight: var(--font-medium);
+      margin-top: 5px;
    }
 
    .nav__menu {
@@ -1134,7 +1142,7 @@ body.dark-theme {
       margin-left: 30px;
    }
 
-   .nav__logo{
+   .nav__logo {
       margin-right: 200px;
    }
 
@@ -1290,7 +1298,7 @@ body.dark-theme {
       margin-right: 30px;
    }
 
-   .nav__logo{
+   .nav__logo {
       margin-left: -100px;
    }
 
