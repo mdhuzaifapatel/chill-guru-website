@@ -248,8 +248,8 @@ body.dark-theme {
    .logo {
       height: auto;
       width: 50px;
-      margin-right: 15px;
-      /* margin-left: -10px; */
+      margin-right: 20px;
+      margin-left: -15px;
    }
 
    .nav__logo {
@@ -423,8 +423,8 @@ body.dark-theme {
 
 /* hsl(50, 100%, 62%) */
 .home__blob {
-   width: 370px;
-   height: 327px;
+   width: 325px;
+   height: 288px;
    border: 6px solid transparent;
    background: var(--first-gradient) padding-box,
       linear-gradient(90deg, hsl(50, 100%, 62%) 0%, hsl(52, 100%, 69%) 100%) border-box;
