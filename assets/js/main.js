@@ -128,7 +128,7 @@ const themeButton = document.getElementById('theme-button');
 const darkTheme = 'dark-theme';
 const iconTheme = 'ri-sun-line';
 
-// Previously selected topic (if user selected)
+// Previously selected theme (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme');
 const selectedIcon = localStorage.getItem('selected-icon');
 
@@ -136,22 +136,26 @@ const selectedIcon = localStorage.getItem('selected-icon');
 const getCurrentTheme = () => (document.body.classList.contains(darkTheme) ? 'dark' : 'light');
 const getCurrentIcon = () => (themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line');
 
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+// If the user has not previously selected a theme or icon, we set the default to dark theme and moon icon
+if (!selectedTheme) {
+   document.body.classList.add(darkTheme);
+   themeButton.classList.add(iconTheme);
+} else {
+   // If the user previously chose a theme, we apply the saved theme and icon
    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-   themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme);
+   themeButton.classList[selectedTheme === 'dark' ? 'add' : 'remove'](iconTheme);
 }
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
-   // Add or remove the dark / icon theme
+   // Add or remove the dark theme / icon theme
    document.body.classList.toggle(darkTheme);
    themeButton.classList.toggle(iconTheme);
-   // We save the theme and the current icon that the user chose
+   // Save the theme and the current icon that the user chose
    localStorage.setItem('selected-theme', getCurrentTheme());
    localStorage.setItem('selected-icon', getCurrentIcon());
 });
+
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({

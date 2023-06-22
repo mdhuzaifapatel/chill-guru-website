@@ -397,11 +397,11 @@ body.dark-theme {
 }
 
 .home__blob {
-   width: 300px;
+   width: 350px;
    height: 250px;
    border: 6px solid transparent;
    background: var(--first-gradient) padding-box,
-      linear-gradient(90deg, hsl(15, 68%, 50%) 0%, hsl(20, 68%, 80%) 100%) border-box;
+      linear-gradient(90deg, hsl(54, 68%, 50%) 0%, hsl(55, 69%, 80%) 100%) border-box;
    border-radius: 20rem 20rem 0 0;
 }
 
@@ -1262,8 +1262,8 @@ body.dark-theme {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
    }
    .home__blob {
-      width: 635px;
-      height: 535px;
+      width: 620px;
+      height: 500px;
       border: 10px solid transparent;
    }
    .home__shadow {
