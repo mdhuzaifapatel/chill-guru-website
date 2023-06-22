@@ -6,14 +6,20 @@
    --header-height: 3.5rem;
    /*========== Colors ==========*/
    /*Color mode HSL(hue, saturation, lightness)*/
-   --first-color: hsl(15, 60%, 52%);
-   --first-color-alt: hsl(15, 68%, 40%);
-   --first-gradient: linear-gradient(90deg, hsl(15, 68%, 42%) 0%, hsl(20, 68%, 80%) 100%);
-   --second-gradient: linear-gradient(90deg, hsl(20, 72%, 57%) 0%, hsl(20, 78%, 80%) 100%);
-   --third-gradient: linear-gradient(90deg, hsl(15, 70%, 40%) 0%, hsl(20, 62%, 60%) 100%);
+   --first-color: hsl(55, 96%, 62%);
+   --first-color-alt: hsl(56, 93%, 65%);
+   /* --first-gradient: linear-gradient(90deg, hsl(52, 100%, 69%) 0%, hsl(50, 100%, 62%) 100%); */
+
+   --first-gradient: linear-gradient(90deg, hsl(55, 96%, 62%) 0%, hsl(56, 93%, 65%) 100%);
+
+
+
+   --second-gradient: linear-gradient(90deg, hsl(55, 96%, 62%) 0%, hsl(56, 93%, 65%) 100%);
+   --third-gradient: linear-gradient(90deg, hsl(55, 96%, 62%) 0%, hsl(56, 93%, 65%) 100%);
    --title-color: hsl(0, 0%, 12%);
    --text-color: hsl(0, 0%, 50%);
    --white-color: #fff;
+   --black-color: #000;
    --body-color: hsl(0, 0%, 96%);
    --container-color: hsl(0, 0%, 100%);
 
@@ -76,7 +82,8 @@ body {
 body {
    background-color: var(--body-color);
    color: var(--text-color);
-   transition: background 0.4s; /* for dark mode animation */
+   transition: background 0.4s;
+   /* for dark mode animation */
 }
 
 input,
@@ -195,7 +202,8 @@ body.dark-theme {
 }
 
 .main {
-   overflow: hidden; /* For animation ScrollReveal */
+   overflow: hidden;
+   /* For animation ScrollReveal */
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -219,8 +227,9 @@ body.dark-theme {
 .nav__logo {
    color: var(--white-color);
    font-family: var(--second-font);
-   font-weight: var(--font-medium);
+   font-weight: var(--body-font);
    transition: color 0.4s;
+   margin-left: -185px;
 }
 
 .nav__logo span {
@@ -233,6 +242,14 @@ body.dark-theme {
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 1023px) {
+  
+   .logo {
+      height: auto;
+      width: 50px;
+      margin-right: 15px;
+      margin-left: -10px;
+   }
+
    .nav__menu {
       position: fixed;
       left: 0;
@@ -396,12 +413,13 @@ body.dark-theme {
    font-size: var(--small-font-size);
 }
 
+/* hsl(50, 100%, 62%) */
 .home__blob {
    width: 370px;
    height: 327px;
    border: 6px solid transparent;
    background: var(--first-gradient) padding-box,
-      linear-gradient(90deg, hsl(54, 68%, 50%) 0%, hsl(55, 69%, 80%) 100%) border-box;
+      linear-gradient(90deg, hsl(50, 100%, 62%) 0%, hsl(52, 100%, 69%) 100%) border-box;
    border-radius: 20rem 20rem 0 0;
 }
 
@@ -444,7 +462,7 @@ body.dark-theme {
    background: var(--third-gradient);
    padding: 0.75rem 1.8rem;
    border-radius: 4rem;
-   color: var(--white-color);
+   color: var(--black-color);
 }
 
 .button,
@@ -522,7 +540,7 @@ body.dark-theme {
    background: var(--third-gradient);
    border-radius: 0.5rem;
    font-size: 1.25rem;
-   color: var(--white-color);
+   color: var(--black-color);
    box-shadow: 0 2px 8px hsla(15, 68%, 32%, 0.4);
    position: absolute;
    right: 0.75rem;
@@ -548,7 +566,8 @@ body.dark-theme {
    font-size: 1.8rem;
    color: var(--first-color);
    box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.1);
-   transition: background 0.4s; /* for dark mode animation */
+   transition: background 0.4s;
+   /* for dark mode animation */
 }
 
 .swiper-button-prev {
@@ -638,7 +657,7 @@ body.dark-theme {
    padding: 0.25rem;
    background: var(--third-gradient);
    border-radius: 0.5rem;
-   color: var(--white-color);
+   color: var(--black-color);
    font-size: 1.25rem;
    box-shadow: 0 2px 8px hsla(15, 68%, 32%, 0.4);
 }
@@ -805,7 +824,8 @@ body.dark-theme {
    height: 200px;
    border-radius: 8rem 8rem 0 0;
    margin-bottom: 0.75rem;
-   transition: background 0.4s; /* for dark mode animation */
+   transition: background 0.4s;
+   /* for dark mode animation */
 }
 
 .products__img {
@@ -841,7 +861,7 @@ body.dark-theme {
    background: var(--third-gradient);
    border-radius: 0.5rem;
    font-size: 1.25rem;
-   color: var(--white-color);
+   color: var(--black-color);
    box-shadow: 0 2px 8px hsla(15, 68%, 32%, 0.4);
    position: absolute;
    right: 0.75rem;
@@ -858,7 +878,8 @@ body.dark-theme {
    row-gap: 0;
    background-color: var(--container-color);
    padding: 0 1.5rem 3.5rem 1.5rem;
-   transition: background 0.4s; /* for dark mode animation */
+   transition: background 0.4s;
+   /* for dark mode animation */
 }
 
 .join__blob {
@@ -928,7 +949,8 @@ body.dark-theme {
    padding: 1.25rem 1.5rem;
    border-radius: 4rem;
    color: var(--text-color);
-   transition: background 0.4s; /* for dark mode animation */
+   transition: background 0.4s;
+   /* for dark mode animation */
 }
 
 .join__input::placeholder {
@@ -1082,6 +1104,7 @@ body.dark-theme {
       align-items: center;
       row-gap: 1rem;
    }
+
    .home__title {
       font-size: 1.75rem;
    }
@@ -1105,6 +1128,16 @@ body.dark-theme {
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
+   .logo {
+      height: auto;
+      width: 50px;
+      margin-left: 30px;
+   }
+
+   .nav__logo{
+      margin-right: 200px;
+   }
+
    .popular__description,
    .products__description {
       width: 350px;
@@ -1133,6 +1166,7 @@ body.dark-theme {
 }
 
 @media screen and (min-width: 768px) {
+
    .section__title,
    .home__data,
    .home__info,
@@ -1147,9 +1181,11 @@ body.dark-theme {
       column-gap: 4rem;
       padding-bottom: 2rem;
    }
+
    .home__image {
       order: -1;
    }
+
    .home__container,
    .choose__container,
    .features__container,
@@ -1157,9 +1193,11 @@ body.dark-theme {
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
    }
+
    .home__bg {
       height: 110%;
    }
+
    .home__buttons,
    .home__info {
       justify-content: initial;
@@ -1168,6 +1206,7 @@ body.dark-theme {
    .popular__description {
       margin: initial;
    }
+
    .popular__content {
       max-width: 700px;
    }
@@ -1191,6 +1230,7 @@ body.dark-theme {
       border-radius: 4rem;
       padding-left: 1.5rem;
    }
+
    .join__input {
       padding: 1rem 0;
    }
@@ -1198,10 +1238,12 @@ body.dark-theme {
    .footer__data {
       grid-template-columns: repeat(3, max-content);
    }
+
    .footer__group {
       flex-direction: row;
       justify-content: space-between;
    }
+
    .footer__copy {
       order: -1;
    }
@@ -1212,14 +1254,17 @@ body.dark-theme {
    .nav {
       column-gap: 4rem;
    }
+
    .nav__close,
    .nav__toggle {
       display: none;
    }
+
    .nav__list {
       flex-direction: row;
       column-gap: 4rem;
    }
+
    .nav__menu {
       margin-left: auto;
    }
@@ -1239,6 +1284,16 @@ body.dark-theme {
 
 /* Desktop */
 @media screen and (min-width: 1152px) {
+   .logo {
+      height: auto;
+      width: 70px;
+      margin-right: 30px;
+   }
+
+   .nav__logo{
+      margin-left: -100px;
+   }
+
    .container {
       margin-inline: auto;
    }
@@ -1257,46 +1312,57 @@ body.dark-theme {
       padding-top: 3.5rem;
       column-gap: 7.5rem;
    }
+
    .home__bg {
       height: 97%;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
    }
+
    .home__blob {
       width: 620px;
-      height: 500px;
+      height: 522px;
       border: 10px solid transparent;
    }
+
    .home__shadow {
       width: 435px;
       height: 60px;
       bottom: -2rem;
       filter: blur(28px);
    }
+
    .home__img {
       width: 1000px;
       transform: translateY(-10px);
    }
+
    .home__blob-title {
       font-size: 7rem;
    }
+
    .home__content {
       row-gap: 4.5rem;
       padding-bottom: 5rem;
    }
+
    .home__subtitle {
       font-size: var(--h3-font-size);
       margin-bottom: 0.75rem;
    }
+
    .home__title {
       margin-bottom: 2.5rem;
    }
+
    .home__buttons {
       column-gap: 2.5rem;
    }
+
    .home__info {
       column-gap: 4rem;
       text-align: initial;
    }
+
    .home__info-subtitle {
       font-size: var(--normal-font-size);
    }
@@ -1304,10 +1370,12 @@ body.dark-theme {
    .popular__description {
       width: 450px;
    }
+
    .popular__content {
       padding-block: 4rem 8rem;
       max-width: 1064px;
    }
+
    .swiper-button-next,
    .swiper-button-prev {
       width: 2.5rem;
@@ -1338,24 +1406,29 @@ body.dark-theme {
       height: 410px;
       padding: 1rem 1rem 1.5rem;
    }
+
    .popular__blob,
    .products__blob {
       height: 240px;
       margin-bottom: 1rem;
    }
+
    .popular__img,
    .products__img {
       width: 150px;
    }
+
    .popular__name,
    .products__name {
       font-size: var(--h3-font-size);
    }
+
    .popular__subtitle,
    .products__subtitle {
       font-size: var(--small-font-size);
       margin-bottom: 1.5rem;
    }
+
    .popular__button,
    .products__button {
       font-size: 1.5rem;
@@ -1374,33 +1447,41 @@ body.dark-theme {
       width: 350px;
       transform: translateY(-10px);
    }
+
    .choose__blob-title {
       font-size: 7rem;
       left: 1.5rem;
       bottom: 4.5rem;
    }
+
    .choose__content {
       row-gap: 3rem;
    }
+
    .choose__faq {
       row-gap: 2.5rem;
    }
+
    .choose__faq-header {
       column-gap: 1.25rem;
    }
+
    .choose__faq-icon {
       font-size: 1.8rem;
       border-radius: 0.75rem;
    }
+
    .choose__faq-title {
       font-size: var(--h2-font-size);
    }
+
    .choose__blob,
    .features__blob {
       width: 500px;
       height: 670px;
       border: 10px solid transparent;
    }
+
    .choose__shadow,
    .features__shadow {
       width: 404px;
@@ -1419,10 +1500,12 @@ body.dark-theme {
       right: 1.5rem;
       bottom: 4.5rem;
    }
+
    .features__info {
       grid-template-columns: repeat(2, 200px);
       gap: 2rem;
    }
+
    .features__info-card {
       padding: 3rem 2rem;
    }
@@ -1430,6 +1513,7 @@ body.dark-theme {
    .products__container {
       row-gap: 4.5rem;
    }
+
    .proudcts__content {
       grid-template-columns: repeat(4, max-content);
       gap: 4rem 3rem;
@@ -1438,37 +1522,45 @@ body.dark-theme {
    .join__container {
       padding-block: 9rem 5rem;
    }
+
    .join__bg {
       grid-template-columns: 450px 380px;
       justify-self: initial;
       column-gap: 6rem;
       padding-inline: 6rem;
    }
+
    .join__blob {
       width: 450px;
       height: 580px;
       border: 10px solid transparent;
    }
+
    .join__shadow {
       width: 352px;
       height: 60px;
       bottom: -2rem;
       filter: blur(28px);
    }
+
    .join__image {
       transform: translateY(-8.5rem);
    }
+
    .join__img {
       width: 360px;
       transform: translateY(-10px);
    }
+
    .join__blob-title {
       font-size: 7rem;
    }
+
    .join__content {
       row-gap: 3rem;
       padding-bottom: 5rem;
    }
+
    .join__form {
       width: 400px;
    }
@@ -1476,25 +1568,32 @@ body.dark-theme {
    .footer {
       padding-block: 3rem;
    }
+
    .footer__logo {
       margin-bottom: 1rem;
    }
+
    .footer__title {
       font-size: var(--h2-font-size);
       margin-bottom: 1.25rem;
    }
+
    .footer__links {
       row-gap: 1rem;
    }
+
    .footer__data {
       column-gap: 4.5rem;
    }
+
    .footer__social {
       column-gap: 1.5rem;
    }
+
    .footer__social-link {
       font-size: 1.5rem;
    }
+
    .footer__group {
       margin-top: 6.5rem;
    }
